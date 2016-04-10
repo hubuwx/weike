@@ -1,0 +1,28 @@
+1.照片名称编码
+
+成功人士的七个良好习惯   weikephoto20150729001
+购物车功能介绍    weikephoto20150729002
+开源软件简介    weikephoto20150729003
+生物的生殖     weikephoto20150729004
+十二生肖APP制作教程    weikephoto20150729005
+水果课_ 火龙果传奇    weikephoto20150729006
+水果课_荔枝的秘密   weikephoto20150729007
+水果课_葡萄的白霜是什么   weikephoto20150729008
+水果课之奇异果还是猕猴桃   weikephoto20150729009
+图案锁应用简介    weikephoto20150729010
+autoCompleteTextView概述  weikephoto20150729011
+
+2.视频名称编码
+
+成功人士的七个良好习惯   weikevedio20150729001
+购物车功能介绍    weikevedio20150729002
+开源软件简介    weikevedio20150729003
+生物的生殖     weikevedio20150729004
+十二生肖APP制作教程    weikevedio20150729005
+水果课_ 火龙果传奇    weikevedio20150729006
+水果课_荔枝的秘密   weikevedio20150729007
+水果课_葡萄的白霜是什么   weikevedio20150729008
+水果课之奇异果还是猕猴桃   weikevedio20150729009
+图案锁应用简介    weikevedio20150729010
+autoCompleteTextView概述  weikevedio20150729011
+

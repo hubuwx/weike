@@ -1,0 +1,864 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/traffic_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:id="@+id/traffic_bar_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/rect_white_bg" >
+
+                    <ImageView
+                        android:id="@+id/traffic_icon"
+                        android:layout_width="26dp"
+                        android:layout_height="28dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/service_pen" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="45dp"
+                        android:text="职场"
+                        android:textColor="#4b4b47"
+                        android:textSize="15dp" />
+
+                    <ImageView
+                        android:id="@+id/traffic_arrow"
+                        android:layout_width="12dp"
+                        android:layout_height="6dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/service_arrow_down"
+                        android:tag="service_arrow" />
+                </RelativeLayout>
+
+                <com.example.weike.view.FoldingLayout
+                    android:id="@+id/traffic_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="135dp"
+                    android:tag="service_item" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="135dp"
+                        android:background="#ff8e6b"
+                        android:orientation="vertical" >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:orientation="horizontal" >
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="29dp"
+                                android:layout_marginLeft="3dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/service_btn_bg"
+                                android:text="办公技能"
+                                android:textColor="#d55a34"
+                                android:textSize="13dp" />
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="29dp"
+                                android:layout_marginLeft="3dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/service_btn_bg"
+                                android:text="求职应聘"
+                                android:textColor="#d55a34"
+                                android:textSize="13dp" />
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="29dp"
+                                android:layout_marginLeft="3dp"
+                                android:layout_marginRight="3dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/service_btn_bg"
+                                android:text="职业考试"
+                                android:textColor="#d55a34"
+                                android:textSize="13dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:orientation="horizontal" >
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="29dp"
+                                android:layout_marginLeft="3dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/service_btn_bg"
+                                android:text="营销推广"
+                                android:textColor="#d55a34"
+                                android:textSize="13dp" />
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="29dp"
+                                android:layout_marginLeft="3dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/service_btn_bg"
+                                android:text="职业规划"
+                                android:textColor="#d55a34"
+                                android:textSize="13dp" />
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="29dp"
+                                android:layout_marginLeft="3dp"
+                                android:layout_marginRight="3dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/service_btn_bg"
+                                android:text="商务礼仪"
+                                android:textColor="#d55a34"
+                                android:textSize="13dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:orientation="horizontal" >
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="29dp"
+                                android:layout_marginLeft="3dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/service_btn_bg"
+                                android:text="更多"
+                                android:textColor="#d55a34"
+                                android:textSize="13dp" />
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="29dp"
+                                android:layout_marginLeft="3dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/service_btn_bg"
+                                android:textColor="#d55a34"
+                                android:textSize="13dp"
+                                android:visibility="invisible" />
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="29dp"
+                                android:layout_marginLeft="3dp"
+                                android:layout_marginRight="3dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/service_btn_bg"
+                                android:textColor="#d55a34"
+                                android:textSize="13dp"
+                                android:visibility="invisible" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </com.example.weike.view.FoldingLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/life_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:id="@+id/life_bar_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/rect_white_bg" >
+
+                    <ImageView
+                        android:id="@+id/life_icon"
+                        android:layout_width="17dp"
+                        android:layout_height="26dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="14dp"
+                        android:background="@drawable/service_diannao" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="45dp"
+                        android:text="IT互联网"
+                        android:textColor="#4b4b47"
+                        android:textSize="15dp" />
+
+                    <ImageView
+                        android:id="@+id/life_arrow"
+                        android:layout_width="12dp"
+                        android:layout_height="6dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/service_arrow_down"
+                        android:tag="service_arrow" />
+                </RelativeLayout>
+
+                <com.example.weike.view.FoldingLayout
+                    android:id="@+id/life_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="135dp"
+                    android:tag="service_item" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="135dp"
+                        android:background="#ffc14c"
+                        android:orientation="vertical" >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:orientation="horizontal" >
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="29dp"
+                                android:layout_marginLeft="3dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/service_btn_bg"
+                                android:text="编程语言"
+                                android:textColor="#a65600"
+                                android:textSize="13dp" />
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="29dp"
+                                android:layout_marginLeft="3dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/service_btn_bg"
+                                android:text="移动开发"
+                                android:textColor="#a65600"
+                                android:textSize="13dp" />
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="29dp"
+                                android:layout_marginLeft="3dp"
+                                android:layout_marginRight="3dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/service_btn_bg"
+                                android:text="Web开发"
+                                android:textColor="#a65600"
+                                android:textSize="13dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:orientation="horizontal" >
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="29dp"
+                                android:layout_marginLeft="3dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/service_btn_bg"
+                                android:text="设计制作"
+                                android:textColor="#a65600"
+                                android:textSize="13dp" />
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="29dp"
+                                android:layout_marginLeft="3dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/service_btn_bg"
+                                android:text="数据库"
+                                android:textColor="#a65600"
+                                android:textSize="13dp" />
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="29dp"
+                                android:layout_marginLeft="3dp"
+                                android:layout_marginRight="3dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/service_btn_bg"
+                                android:text="操作系统"
+                                android:textColor="#a65600"
+                                android:textSize="13dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:orientation="horizontal" >
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="29dp"
+                                android:layout_marginLeft="3dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/service_btn_bg"
+                                android:text="硬件开发"
+                                android:textColor="#a65600"
+                                android:textSize="13dp" />
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="29dp"
+                                android:layout_marginLeft="3dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/service_btn_bg"
+                                android:text="网络运营"
+                                android:textColor="#a65600"
+                                android:textSize="13dp" />
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="29dp"
+                                android:layout_marginLeft="3dp"
+                                android:layout_marginRight="3dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/service_btn_bg"
+                                android:text="更多"
+                                android:textColor="#a65600"
+                                android:textSize="13dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </com.example.weike.view.FoldingLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/medical_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:id="@+id/medical_bar_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/rect_white_bg" >
+
+                    <ImageView
+                        android:id="@+id/medical_icon"
+                        android:layout_width="24dp"
+                        android:layout_height="25dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="11dp"
+                        android:background="@drawable/service_yuyin" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="45dp"
+                        android:text="语言学习"
+                        android:textColor="#4b4b47"
+                        android:textSize="15dp" />
+
+                    <ImageView
+                        android:id="@+id/medical_arrow"
+                        android:layout_width="12dp"
+                        android:layout_height="6dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/service_arrow_down"
+                        android:tag="service_arrow" />
+                </RelativeLayout>
+
+                <com.example.weike.view.FoldingLayout
+                    android:id="@+id/medical_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="135dp"
+                    android:tag="service_item" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="135dp"
+                        android:background="#699bf9"
+                        android:orientation="vertical" >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:orientation="horizontal" >
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="29dp"
+                                android:layout_marginLeft="3dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/service_btn_bg"
+                                android:text="日常英语"
+                                android:textColor="#2b5bb5"
+                                android:textSize="13dp" />
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="29dp"
+                                android:layout_marginLeft="3dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/service_btn_bg"
+                                android:text="出国英语"
+                                android:textColor="#2b5bb5"
+                                android:textSize="13dp" />
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="29dp"
+                                android:layout_marginLeft="3dp"
+                                android:layout_marginRight="3dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/service_btn_bg"
+                                android:text="考试英语"
+                                android:textColor="#2b5bb5"
+                                android:textSize="13dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:orientation="horizontal" >
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="29dp"
+                                android:layout_marginLeft="3dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/service_btn_bg"
+                                android:text="日语"
+                                android:textColor="#2b5bb5"
+                                android:textSize="13dp" />
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="29dp"
+                                android:layout_marginLeft="3dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/service_btn_bg"
+                                android:text="德语"
+                                android:textColor="#2b5bb5"
+                                android:textSize="13dp" />
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="29dp"
+                                android:layout_marginLeft="3dp"
+                                android:layout_marginRight="3dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/service_btn_bg"
+                                android:text="韩语"
+                                android:textColor="#2b5bb5"
+                                android:textSize="13dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:orientation="horizontal" >
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="29dp"
+                                android:layout_marginLeft="3dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/service_btn_bg"
+                                android:text="小语种"
+                                android:textColor="#2b5bb5"
+                                android:textSize="13dp" />
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="29dp"
+                                android:layout_marginLeft="3dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/service_btn_bg"
+                                android:text="更多"
+                                android:textColor="#2b5bb5"
+                                android:textSize="13dp" />
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="29dp"
+                                android:layout_marginLeft="3dp"
+                                android:layout_marginRight="3dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/service_btn_bg"
+                                android:textColor="#2b5bb5"
+                                android:textSize="13dp"
+                                android:visibility="invisible" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </com.example.weike.view.FoldingLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/live_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:id="@+id/live_bar_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/rect_white_bg" >
+
+                    <ImageView
+                        android:id="@+id/live_icon"
+                        android:layout_width="26dp"
+                        android:layout_height="20dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/service_xingqu" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="45dp"
+                        android:text="兴趣爱好"
+                        android:textColor="#4b4b47"
+                        android:textSize="15dp" />
+
+                    <ImageView
+                        android:id="@+id/live_arrow"
+                        android:layout_width="12dp"
+                        android:layout_height="6dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/service_arrow_down"
+                        android:tag="service_arrow" />
+                </RelativeLayout>
+
+                <com.example.weike.view.FoldingLayout
+                    android:id="@+id/live_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="135dp"
+                    android:tag="service_item" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="135dp"
+                        android:background="#59cd82"
+                        android:orientation="vertical" >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:orientation="horizontal" >
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="29dp"
+                                android:layout_marginLeft="3dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/service_btn_bg"
+                                android:text="体育健身"
+                                android:textColor="#1a6535"
+                                android:textSize="13dp" />
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="29dp"
+                                android:layout_marginLeft="3dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/service_btn_bg"
+                                android:text="摄影摄像"
+                                android:textColor="#1a6535"
+                                android:textSize="13dp" />
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="29dp"
+                                android:layout_marginLeft="3dp"
+                                android:layout_marginRight="3dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/service_btn_bg"
+                                android:text="书法绘画"
+                                android:textColor="#1a6535"
+                                android:textSize="13dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:orientation="horizontal" >
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="29dp"
+                                android:layout_marginLeft="3dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/service_btn_bg"
+                                android:text="美食烹饪"
+                                android:textColor="#1a6535"
+                                android:textSize="13dp" />
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="29dp"
+                                android:layout_marginLeft="3dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/service_btn_bg"
+                                android:text="生活心理"
+                                android:textColor="#1a6535"
+                                android:textSize="13dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:orientation="horizontal" >
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="29dp"
+                                android:layout_marginLeft="3dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/service_btn_bg"
+                                android:text="时尚美妆"
+                                android:textColor="#1a6535"
+                                android:textSize="13dp" />
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="29dp"
+                                android:layout_marginLeft="3dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/service_btn_bg"
+                                android:text="更多"
+                                android:textColor="#1a6535"
+                                android:textSize="13dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </com.example.weike.view.FoldingLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/public_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:id="@+id/public_bar_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/rect_white_bg" >
+
+                    <ImageView
+                        android:id="@+id/public_icon"
+                        android:layout_width="26dp"
+                        android:layout_height="25dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/service_public_icon" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="45dp"
+                        android:text="更多分类"
+                        android:textColor="#4b4b47"
+                        android:textSize="15dp" />
+
+                    <ImageView
+                        android:id="@+id/public_arrow"
+                        android:layout_width="12dp"
+                        android:layout_height="6dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/service_arrow_down"
+                        android:tag="service_arrow" />
+                </RelativeLayout>
+
+                <com.example.weike.view.FoldingLayout
+                    android:id="@+id/public_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="135dp"
+                    android:tag="service_item" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="135dp"
+                        android:background="#a484d9"
+                        android:orientation="vertical" >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:orientation="horizontal" >
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="29dp"
+                                android:layout_marginLeft="3dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/service_btn_bg"
+                                android:text="生活百科"
+                                android:textColor="#473762"
+                                android:textSize="13dp" />
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="29dp"
+                                android:layout_marginLeft="3dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/service_btn_bg"
+                                android:text="工程技术"
+                                android:textColor="#473762"
+                                android:textSize="13dp" />
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="29dp"
+                                android:layout_marginLeft="3dp"
+                                android:layout_marginRight="3dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/service_btn_bg"
+                                android:text="基础科学"
+                                android:textColor="#473762"
+                                android:textSize="13dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:orientation="horizontal" >
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="29dp"
+                                android:layout_marginLeft="3dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/service_btn_bg"
+                                android:text="文学艺术"
+                                android:textColor="#473762"
+                                android:textSize="13dp" />
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="29dp"
+                                android:layout_marginLeft="3dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/service_btn_bg"
+                                android:text="家居装饰"
+                                android:textColor="#473762"
+                                android:textSize="13dp" />
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="29dp"
+                                android:layout_marginLeft="3dp"
+                                android:layout_marginRight="3dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/service_btn_bg"
+                                android:text="哲学历史"
+                                android:textColor="#473762"
+                                android:textSize="13dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:orientation="horizontal" >
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="29dp"
+                                android:layout_marginLeft="3dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/service_btn_bg"
+                                android:text="更多"
+                                android:textColor="#473762"
+                                android:textSize="13dp" />
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="29dp"
+                                android:layout_marginLeft="3dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/service_btn_bg"
+                                android:textColor="#473762"
+                                android:textSize="13dp"
+                                android:visibility="invisible" />
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="29dp"
+                                android:layout_marginLeft="3dp"
+                                android:layout_marginRight="3dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/service_btn_bg"
+                                android:textColor="#473762"
+                                android:textSize="13dp"
+                                android:visibility="invisible" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </com.example.weike.view.FoldingLayout>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/bottom_view"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:visibility="invisible" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
