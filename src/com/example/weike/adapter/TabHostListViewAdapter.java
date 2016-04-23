@@ -43,7 +43,7 @@ public class TabHostListViewAdapter extends BaseAdapter {
 	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
 		if(convertView ==null){
-			convertView = LayoutInflater.from(context).inflate(R.layout.tabhost_listview_items, null);
+			convertView = LayoutInflater.from(context).inflate(R.layout.item_tabhost_listview, null);
 		}
 		TextView tv = (TextView) convertView.findViewById(R.id.tv);
 		tv.setText(list.get(position));

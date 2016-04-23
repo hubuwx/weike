@@ -19,7 +19,7 @@ import android.widget.Button;
 
 
 public class main extends Activity implements OnClickListener{
-	private Button btn_return,btn_forward,btn1,btn2,btn3,btn4,btn5;
+	private Button btn_return,btn_forward,btn1,btn2,btn3,btn4,btn5,btn6,btn7;
 //	private RadioGroup group;
 //	private RadioButton main_home;
 	
@@ -40,6 +40,8 @@ public class main extends Activity implements OnClickListener{
     	btn3 = (Button) findViewById(R.id.button3);   
     	btn4 = (Button) findViewById(R.id.button4);   
     	btn5 = (Button) findViewById(R.id.button5);   
+    	btn6 = (Button) findViewById(R.id.button6);   
+    	btn7 = (Button) findViewById(R.id.button7);   
     	
     	btn_return.setOnClickListener(this); 
     	btn_forward.setOnClickListener(this); 
@@ -48,6 +50,8 @@ public class main extends Activity implements OnClickListener{
     	btn3.setOnClickListener(this); 
     	btn4.setOnClickListener(this); 
     	btn5.setOnClickListener(this); 
+    	btn6.setOnClickListener(this); 
+    	btn7.setOnClickListener(this); 
     	
 				
 		
@@ -59,7 +63,7 @@ public class main extends Activity implements OnClickListener{
 	public void onClick(View v) {
 		switch (v.getId()) {
 		case R.id.back:
-			Intent intent =new Intent(main.this,LoginActivity.class);
+			Intent intent =new Intent(main.this,HomeActivity.class);
 			startActivity(intent);
 			break;
 
@@ -69,12 +73,12 @@ public class main extends Activity implements OnClickListener{
 			break;
 			
 		case R.id.button1:
-			Intent intent3 =new Intent(main.this,activity_information.class);
+			Intent intent3 =new Intent(main.this,activity_course_details.class);
 			startActivity(intent3);
 			break;
 			
 		case R.id.button2:
-			Intent intent4 =new Intent(main.this,every_learn_activity.class);
+			Intent intent4 =new Intent(main.this,every_course_activity.class);
 			startActivity(intent4);
 			break;
 		case R.id.button3:
@@ -86,8 +90,16 @@ public class main extends Activity implements OnClickListener{
 			startActivity(intent6);
 			break;
 		case R.id.button5:
-			Intent intent7 =new Intent(main.this,FolderActivity.class);
+			Intent intent7 =new Intent(main.this,ClassActivity.class);
 			startActivity(intent7);
+			break;
+		case R.id.button6:
+			Intent intent8 =new Intent(main.this,activity_course_list.class);
+			startActivity(intent8);
+			break;
+		case R.id.button7:
+			Intent intent9 =new Intent(main.this,UIActivity.class);
+			startActivity(intent9);
 			break;
 		}
 		

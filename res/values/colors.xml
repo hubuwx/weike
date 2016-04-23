@@ -12,5 +12,34 @@
     <color name="SkyBlue">#87CEEB</color>
     <color name="grey_back">#CCCCCC</color>
     <color name="normal_orange">#FF6633</color>
+    <color name="common_gray_color">#ffd6d6d6</color>
+    <color name="indicator_color">#ffff6d00</color>
+    <color name="common_white_color">#ffffffff</color>
+    <color name="common_black_color">#ff383838</color>
+    <color name="common_blue_color">#ff44a9ff</color>
+    <color name="home_banner_checked_color">#ffea0107</color>
+    <color name="home_banner_default_color">#ffffffff</color>
+    <color name="common_orange_color">#ffff6d00</color>
+    <color name="common_transparent_color">#00000000</color>
+    <color name="listview_diver_filter_color">#ff000000</color>
+    <color name="listview_diver_gray">#ffd6d6d6</color>
+    <color name="search_pagertabstrip_color">#ff212121</color>
+
+    <integer-array name="gplus_colors">
+        <item>@color/gplus_color_1</item>
+        <item>@color/gplus_color_2</item>
+        <item>@color/gplus_color_3</item>
+        <item>@color/gplus_color_4</item>
+    </integer-array>
+
+    <color name="gplus_color_1">#3e802f</color>
+    <color name="gplus_color_2">#427fed</color>
+    <color name="gplus_color_3">#b23424</color>
+    <color name="gplus_color_4">#f4b400</color>
+    <color name="theme_color">#D95555</color>
+    <color name="second_color">#888888</color>
+
+    <drawable name="bg_ic_navi_normal">#FFFFFF</drawable>
+    <drawable name="bg_ic_navi_pressed">#EEEEEE</drawable>
 
 </resources>

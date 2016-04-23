@@ -16,16 +16,15 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 public class LoginActivity extends Activity implements OnClickListener {
 
-	private Button btn_login, btn_login_reset,not_login;
+	private Button btn_login;
 	private EditText edit_name, edit_password;
 	private SQLiteDatabase db;
 	private SqliteOpenHelper mysqlhelper;
-//    private CheckBox auto;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -33,22 +32,11 @@ public class LoginActivity extends Activity implements OnClickListener {
 		mysqlhelper = new SqliteOpenHelper(LoginActivity.this);
 		db = mysqlhelper.getWritableDatabase();
 
-//		auto = (CheckBox) findViewById(R.id.auto);//暂未实现
 
-		btn_login = (Button) findViewById(R.id.login);
-		btn_login_reset = (Button) findViewById(R.id.login_reset);
-//		not_login = (Button) findViewById(R.id.not_login);
-		edit_name = (EditText) findViewById(R.id.edit_name);
-		edit_password = (EditText) findViewById(R.id.edit_password);
-		
-
+		btn_login = (Button) findViewById(R.id.register);
+		edit_name = (EditText) findViewById(R.id.user_name_input);
+		edit_password = (EditText) findViewById(R.id.user_password_input);
 		btn_login.setOnClickListener(this);
-		btn_login_reset.setOnClickListener(this);
-		
-		TextView reg = (TextView) findViewById(R.id.txt_reg);
-		reg.setClickable(true);
-		reg.setFocusable(true);
-		reg.setOnClickListener(this);
 		
 	}
 
@@ -57,7 +45,7 @@ public class LoginActivity extends Activity implements OnClickListener {
 	public void onClick(View v) {
 		// TODO Auto-generated method stub
 		switch (v.getId()) {
-		case R.id.login:
+		case R.id.register:
 			if(edit_name.getText().toString().equals("") || edit_name.getText().toString().equalsIgnoreCase(null)
 					|| edit_password.getText().toString().equals("")||edit_password.getText().toString().equalsIgnoreCase(null))
 				Toast.makeText(LoginActivity.this, "别闹了，把用户名或密码填上！",Toast.LENGTH_SHORT).show();	
@@ -97,15 +85,6 @@ public class LoginActivity extends Activity implements OnClickListener {
 			}
 			break;
 
-		case R.id.login_reset:
-			edit_name.setText("");
-			edit_password.setText("");
-			break;
-			
-		case R.id.txt_reg:
-			Intent intent = new Intent(LoginActivity.this, regActivity.class);
-			startActivity(intent);
-			finish();
 		}
 	}
 	

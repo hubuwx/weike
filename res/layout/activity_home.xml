@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <com.example.weike.widget.MainTitlebar
+            android:id="@+id/main_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+        <!-- com.example.weike.widget.MainTitlebar -->
+
+        <ScrollView
+            android:id="@+id/scroll"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:fadingEdgeLength="0dp"
+            android:scrollbars="none" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:id="@+id/rly_feature_container"
+                    android:layout_width="fill_parent"
+                    android:layout_height="160dip"
+                    android:layout_weight="1.21"
+                    android:background="@color/common_black_color"
+                    android:orientation="vertical" >
+
+                    <com.example.weike.widget.GalleryView
+                        android:id="@+id/newImageGallery"
+                        android:layout_width="match_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_alignParentBottom="true"
+                        android:fadingEdgeLength="0dip"
+                        android:gravity="center_vertical"
+                        android:unselectedAlpha="1" />
+
+                    <!-- 底部导航状态 -->
+
+                    <RadioGroup
+                        android:id="@+id/mainRadioGallery"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:orientation="horizontal"
+                        android:paddingLeft="15dip" >
+                    </RadioGroup>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_home_title"
+                    android:gravity="center_vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/title_text_padding_left"
+                        android:text="好评微课"
+                        android:textColor="@color/common_white_color"
+                        android:textSize="@dimen/common_font_size_18" />
+
+                    <TextView
+                        android:id="@+id/recommendMore_HP"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/title_text_padding_left"
+                        android:text="更多"
+                        android:textColor="@color/common_white_color"
+                        android:textSize="@dimen/common_font_size_18" />
+                </RelativeLayout>
+
+                <GridView
+                    android:id="@+id/gridview_HP_course"
+                    android:layout_width="fill_parent"
+                    android:layout_height="310.0dip"
+                    android:layout_marginLeft="@dimen/videodetail_padding_left"
+                    android:layout_marginRight="@dimen/videodetail_padding_right"
+                    android:horizontalSpacing="@dimen/videodetail_gridview_padding"
+                    android:numColumns="3"
+                    android:verticalSpacing="@dimen/videodetail_gridview_padding" />
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_home_title"
+                    android:gravity="center_vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/title_text_padding_left"
+                        android:text="精品微课"
+                        android:textColor="@color/common_white_color"
+                        android:textSize="@dimen/common_font_size_18" />
+
+                    <TextView
+                        android:id="@+id/recommendMore_JP"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/title_text_padding_left"
+                        android:text="更多"
+                        android:textColor="@color/common_white_color"
+                        android:textSize="@dimen/common_font_size_18" />
+                </RelativeLayout>
+
+                <GridView
+                    android:id="@+id/gridview_JP_course"
+                    android:layout_width="fill_parent"
+                    android:layout_height="310.0dip"
+                    android:layout_marginLeft="@dimen/videodetail_padding_left"
+                    android:layout_marginRight="@dimen/videodetail_padding_right"
+                    android:horizontalSpacing="@dimen/videodetail_gridview_padding"
+                    android:numColumns="3"
+                    android:verticalSpacing="@dimen/videodetail_gridview_padding" />
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_home_title"
+                    android:gravity="center_vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/title_text_padding_left"
+                        android:text="推荐"
+                        android:textColor="@color/common_white_color"
+                        android:textSize="@dimen/common_font_size_18" />
+
+                    <TextView
+                        android:id="@+id/recommendMore_TJ"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/title_text_padding_left"
+                        android:text="更多"
+                        android:textColor="@color/common_white_color"
+                        android:textSize="@dimen/common_font_size_18" />
+                </RelativeLayout>
+
+                <GridView
+                    android:id="@+id/gridview_TJ_course"
+                    android:layout_width="fill_parent"
+                    android:layout_height="310.0dip"
+                    android:layout_marginLeft="@dimen/videodetail_padding_left"
+                    android:layout_marginRight="@dimen/videodetail_padding_right"
+                    android:horizontalSpacing="@dimen/videodetail_gridview_padding"
+                    android:numColumns="3"
+                    android:verticalSpacing="@dimen/videodetail_gridview_padding" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</RelativeLayout>

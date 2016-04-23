@@ -23,8 +23,7 @@ public class SqliteOpenHelper extends SQLiteOpenHelper {
 	public void onCreate(SQLiteDatabase db) {
 		db.execSQL("create table normalusers(_id integer primary key autoincrement,"
 				+ "username varchar(20)," + "password varchar(20))");
-		db.execSQL("create table Managers(_id integer primary key autoincrement,"
-				+ "User varchar(20)," + "Pass varchar(20))");
+		
 		
 
 	}

@@ -1,11 +1,24 @@
 package com.example.weike;
 
+
+
+
+
+import com.example.weike.Utils.LogUtil;
+import com.example.weike.Utils.PlayerUtils;
+
 import android.app.Activity;
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 import android.media.MediaPlayer;
 import android.media.MediaPlayer.OnPreparedListener;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo.State;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -27,10 +40,13 @@ import android.widget.Toast;
 
 public class VideoPlayerActivity extends Activity implements OnClickListener {
 
+	private final static String TAG = "VideoPlayer";
+	public static final String netACTION = "android.net.conn.CONNECTIVITY_CHANGE";
+//	private NetCheckReceiver mCheckReceiver;
 	// 视频播放地址
-//	 private String videoUrl =
-//	 "http://v.iask.com/v_play_ipad.php?vid=138152839";
-	private String videoUrl = "http://v.iask.com/v_play_ipad.php?vid=138152839";
+	 private String videoUrl = "http://v.iask.com/v_play_ipad.php?vid=138152839";
+//	 private String videoUrl = "http://pan.baidu.com/play/video#video/path=%2Fweike%2Frjgc_jiegoutu.mp4&t=-1";
+	
 	/*************************************************/
 	private SurfaceView video_sv;// 绘图容器对象，用于把视频显示在屏幕上
 	private ProgressBar video_pb;
@@ -65,24 +81,99 @@ public class VideoPlayerActivity extends Activity implements OnClickListener {
 		/* 设置屏幕常亮 *//* flag：标记 ； */
 		getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 		setContentView(R.layout.activity_video); // 加载布局文件
+		Intent i = getIntent();
+//		videoUrl = i.getStringExtra("uri");
+		String video_title = i.getStringExtra("title");
+		
+		
 		initView(); // 初始化数据
-
 		playVideo();
+//		video_tv_name.setText(video_title);
 		setListener(); // 绑定相关事件
-
+		
 	}
 	
 	@SuppressWarnings("deprecation")
 	private void playVideo() {
 		video_pb.setVisibility(View.VISIBLE);
-		video_tv_name.setText("视屏名称xxx");// 视频标题
+		video_tv_name.setText("测试视频1");// 视频标题
 		video_btn_play.setEnabled(false); // 刚进来，设置其不可点击
 		video_sv.getHolder().setType(SurfaceHolder.SURFACE_TYPE_PUSH_BUFFERS);
 		video_sv.getHolder().setKeepScreenOn(true); // 保持屏幕高亮
 		video_sv.getHolder().addCallback(new surFaceView()); // 设置监听事件
 		mHandler.sendMessageDelayed(mHandler.obtainMessage(0x124), 3000);// 隐藏控件
+		
 	}
 
+//	/**
+//	 * 注册检查网络变化*
+//	 */
+//	private void regListenerNet() {
+//		mCheckReceiver = new NetCheckReceiver();
+//		IntentFilter intentfilter = new IntentFilter();
+//		intentfilter.addAction(netACTION);
+//		this.registerReceiver(mCheckReceiver, intentfilter);
+//	}
+//
+//	/**
+//	 * 取消注册检查网络变化*
+//	 */
+//	private void unregisterListenerNet() {
+//		if (mCheckReceiver != null) {
+//			unregisterReceiver(mCheckReceiver);
+//
+//		}
+//
+//	}
+//
+//	private boolean isHttp = false;
+//	private int fristBufferOk = -1;
+//	private boolean isNetAvailable = true;
+//	
+//	private void checkNetworkInfo() {
+//		ConnectivityManager conMan = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+//
+//		State mobile = conMan.getNetworkInfo(ConnectivityManager.TYPE_MOBILE)
+//				.getState();
+//		State wifi = conMan.getNetworkInfo(ConnectivityManager.TYPE_WIFI)
+//				.getState();
+//
+//		if (mobile == State.CONNECTED || mobile == State.CONNECTING) {
+//			
+//			if (videoUrl != null && isHttp&&!PlayerUtils.getTip3GNework(VideoPlayerActivity.this)&&isNetAvailable) {
+//			Toast.makeText(VideoPlayerActivity.this, getString(R.string.net_3g), 1)
+//						.show();
+//		}
+//		isNetAvailable = true;
+//		return;
+//		}
+////
+//		if (wifi == State.CONNECTED || wifi == State.CONNECTING) {
+//			isNetAvailable = true;
+//			return;
+//		}
+//		isNetAvailable = false;
+//		// 添加对本地文件的判断，播放本地文件时不应提示网络中断
+//		if (videoUrl != null && isHttp && fristBufferOk == 0) {
+//			Toast.makeText(VideoPlayerActivity.this,
+//				getString(R.string.net_outage_tip), 1).show();
+//	}
+//
+//	}
+//
+//	class NetCheckReceiver extends BroadcastReceiver {
+//
+//
+//		@Override
+//		public void onReceive(Context context, Intent intent) {
+//			if (intent.getAction().equals(netACTION)) {
+//				LogUtil.e(TAG, "ACTION:" + intent.getAction());
+//				checkNetworkInfo();
+//			}
+//
+//		}
+//	}
+	
 	private void initView() {
 		video_sv = (SurfaceView) findViewById(R.id.video_sv);
 		video_pb = (ProgressBar) findViewById(R.id.video_pb);
@@ -112,7 +203,10 @@ public class VideoPlayerActivity extends Activity implements OnClickListener {
 	public void onClick(View v) {
 		switch (v.getId()) {
 		case R.id.video_btn_back:// 返回小屏播放页面
-			startActivity(new Intent(getApplication(),every_learn_activity.class));
+			startActivity(new Intent(getApplication(),every_course_activity.class));
+//			Intent i = new Intent(getApplicationContext(),every_learn_activity.class);
+//			i.putExtra("uri", videoUrl);
+//			startActivity(i);
 			finish();
 			break;
 		case R.id.video_btn_lock:
@@ -197,10 +291,11 @@ public class VideoPlayerActivity extends Activity implements OnClickListener {
 			try {
 				mediaPlayer.reset(); // 回复播放器默认
 				mediaPlayer.setDataSource(videoUrl); // 设置播放路径
+//				mediaPlayer.create(getApplicationContext(), R.raw.rjgc_jiegoutu);
 				mediaPlayer.setDisplay(video_sv.getHolder()); // 把视频显示在SurfaceView上
 				mediaPlayer.setOnPreparedListener(new PreparedListener(post)); // 设置监听事件
 				mediaPlayer.prepare(); // 准备播放
-					mediaPlayer.seekTo(50000);
+				mediaPlayer.seekTo(50000);
 			} catch (Exception e) {
 				e.printStackTrace();
 			}

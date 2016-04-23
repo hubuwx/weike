@@ -37,8 +37,8 @@ public class activity_TabHost extends TabActivity {
 		listView1 = (ListView) findViewById(R.id.listView1);
 		listView2 = (ListView) findViewById(R.id.listView2);
 		listView3 = (ListView) findViewById(R.id.listView3);
-		ck_baomi = (CheckBox) findViewById(R.id.checkBox1);
-		ck_save_zhudian = (CheckBox) findViewById(R.id.checkBox2);
+//		ck_baomi = (CheckBox) findViewById(R.id.checkBox1);
+//		ck_save_zhudian = (CheckBox) findViewById(R.id.checkBox2);
 
 		// listView1.setOnItemClickListener(this);
 		// listView2.setOnItemClickListener(this);

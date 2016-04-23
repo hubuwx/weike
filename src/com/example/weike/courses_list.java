@@ -90,7 +90,7 @@ public class courses_list extends Activity {
 				Toast.makeText(courses_list.this,
 						"你选择的是     " + gridview.getItemAtPosition(position).toString() + "   课程",
 						Toast.LENGTH_SHORT).show();
-				Intent intent = new Intent(courses_list.this,activity_information.class);
+				Intent intent = new Intent(courses_list.this,activity_course_details.class);
 				startActivity(intent);
 			}
 		});
